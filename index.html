@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LA AHUMADERA - Reservaciones</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/xf8v7z8/favicon.png">
+    <!-- Favicon en base64 -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAuJJREFUWEftl01IVFEUx3/nvWmyD6LSRUhBRpugIloUmBUt2gSFQososGUQEi6klbQZZxYK0SK0PgxdSBBU0CaoRdHOhXsXQR+bQAqKsD4o0Dx17p03M2/evHnzxiIK3M17///5n3PuPed/r0SRP3lTf+i+u5c8l4BjwHYgAUwAr4Cbya7Yzai0iySg2l5CkXxUDwIdwI/AA0vAeeAGsNVy2/AjERhApX6VHAU6ga+Rz5OqtEvSB4AHQB3wGjiiSSZmA6E9BOIAVNvbsWQc2AU8A5o1yRfLNqDhKk9wWt7yTvWQJOXeIvAAkK9JvhcEUG1vxpIJoAF4pEnOlxpA2O4XS4ZnCg0gqUn+q8HUcheoKrELfOJyBICnQNkcuKNJ7i0OANVdGI4GqtLAtCY5VRIAKmkscm+QE5rkY3EAqG4jHHoZGqQJTfKmKABUt2LJK2A/8EiTnC0agKoOYnEL2AG80yRHiwLAT7nqNWzuAZv8lJ8sKgC/CucmEfkO7NMkn4sCILzk1lOh6lOuSX6WFUD4uUHWpebAA01yZr4AnsRGQ/kTDvAXqAX+RGPVPQhPgUZN8mGeSw7EZsAIiLSH1wLGTxZL3gaaSvkKHmiSrpBSLWwgKUIXIFaEY9yMJrkeZj2wvIZ21wNTQFKTzLGlGhAwnMbulzFKGbXKbM8RGIBqHZbxA/sI2jx7tRndOkQiQHuN1J2AMpM4NApW2Ae2A6eA48AOoExVE7MBGNt1F32zhUOoubBMVwJR6Zt6vA6qgEvAUeB4FIDpcULX0kO69q1lSgpQz62nLa7jj5LnXQEuAwf9M1YMtVFmE/YQarVFBGHPpQJvAKNlV4D9IdQ6BMYxBWmV4wawFO6tGYB2o1qOyHng4hwARuSEd3xtaJXTIQApAUztqrKXkWAYlbM5Wkbk5VzU+g/A5NHYm+/AAaAJSADjwEvgVrE1TFCk/wCt6zSh7g3Y7QAAAABJRU5ErkJggg==">
     <style>
         body {
             margin: 0;
@@ -170,11 +170,17 @@
         const fechaInput = document.getElementById('fecha');
         fechaInput.min = new Date().toISOString().split('T')[0];
 
-        // Poblar las horas disponibles
+        // Poblar las horas disponibles - MODIFICADO PARA NUEVO HORARIO
         const horasDisponibles = [
-            '13:00', '13:30', '14:00', '14:30', '15:00', '15:30',
-            '16:00', '16:30', '17:00', '17:30', '18:00', '18:30',
-            '19:00', '19:30', '20:00', '20:30', '21:00'
+            '10:00', '10:30', 
+            '11:00', '11:30', 
+            '12:00', '12:30',
+            '13:00', '13:30', 
+            '14:00', '14:30', 
+            '15:00', '15:30',
+            '16:00', '16:30', 
+            '17:00', '17:30', 
+            '18:00'
         ];
 
         const horaSelect = document.getElementById('hora');
@@ -195,7 +201,7 @@
             const hora = document.getElementById('hora').value;
             const telefono = document.getElementById('telefono').value;
             
-            const whatsappNumber = '525540035330';
+            const whatsappNumber = '525555079259';
             
             const mensaje = encodeURIComponent(`¡Hola! Me gustaría hacer una reserva en LA AHUMADERA:
 
